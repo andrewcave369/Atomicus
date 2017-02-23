@@ -1,0 +1,90 @@
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\electron.xnb
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\neutron.xnb
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\proton.xnb
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.exe
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.pdb
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\obj\x86\Debug\Atomicus.exe
+c:\users\andrew\documents\visual studio 2015\Projects\Atomicus\Atomicus\obj\x86\Debug\Atomicus.pdb
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\dottedRectangle.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\dottedRectangle.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\electron.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\neutron.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\proton.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.exe
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.pdb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+F:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
+F:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.exe
+F:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.pdb
+G:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.exe
+G:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.pdb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\dottedRectangle.xnb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\electron.xnb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\neutron.xnb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\proton.xnb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.exe
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.pdb
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\MonoGame.Framework.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+G:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
+G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\arial12.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\arial12.xnb
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\squareBorder.xnb

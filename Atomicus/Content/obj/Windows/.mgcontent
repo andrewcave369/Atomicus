@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>F:/Atomicus/Atomicus/Content/particles/electron.png</File>
+    <File>F:/Atomicus/Atomicus/Content/particles/proton.png</File>
+    <File>F:/Atomicus/Atomicus/Content/particles/neutron.png</File>
+    <File>F:/Atomicus/Atomicus/Content/dottedRectangle.png</File>
+    <File>F:/Atomicus/Atomicus/Content/arial12.spritefont</File>
+    <File>F:/Atomicus/Atomicus/Content/squareBorder.png</File>
+  </SourceFiles>
+</SourceFileCollection>
