@@ -88,3 +88,5 @@ G:\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
 G:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\arial12.xnb
 F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\arial12.xnb
 F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\squareBorder.xnb
+C:\Users\Andrew\Documents\Atomicus\Atomicus\obj\x86\Debug\Atomicus.exe
+C:\Users\Andrew\Documents\Atomicus\Atomicus\obj\x86\Debug\Atomicus.pdb
