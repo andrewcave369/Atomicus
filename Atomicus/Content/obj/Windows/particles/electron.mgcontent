@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>F:/Atomicus/Atomicus/Content/particles/electron.png</SourceFile>
+  <SourceFile>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/particles/electron.png</SourceFile>
   <SourceTime>2017-02-16T05:12:34+00:00</SourceTime>
-  <DestFile>F:/Atomicus/Atomicus/Content/bin/Windows/particles/electron.xnb</DestFile>
-  <DestTime>2017-02-16T05:12:38+00:00</DestTime>
+  <DestFile>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/bin/Windows/particles/electron.xnb</DestFile>
+  <DestTime>2017-02-24T08:52:06.0156043+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T07:36:08+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

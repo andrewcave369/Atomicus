@@ -4,11 +4,11 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>F:/Atomicus/Atomicus/Content/particles/electron.png</File>
-    <File>F:/Atomicus/Atomicus/Content/particles/proton.png</File>
-    <File>F:/Atomicus/Atomicus/Content/particles/neutron.png</File>
-    <File>F:/Atomicus/Atomicus/Content/dottedRectangle.png</File>
-    <File>F:/Atomicus/Atomicus/Content/arial12.spritefont</File>
-    <File>F:/Atomicus/Atomicus/Content/squareBorder.png</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/particles/electron.png</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/particles/proton.png</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/particles/neutron.png</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/dottedRectangle.png</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/arial12.spritefont</File>
+    <File>C:/Users/Andrew/Documents/Atomicus/Atomicus/Content/squareBorder.png</File>
   </SourceFiles>
 </SourceFileCollection>
