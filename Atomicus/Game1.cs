@@ -10,18 +10,19 @@ namespace Atomicus
     public class Game1 : Game
     {
         static internal int protonCount, neutronCount, electronCount;
+        static internal Vector2 recepticalSize, receptical1, receptical2, receptical3;
+        static internal Rectangle universe;
+        static internal Vector2 universeCentre;
+        static internal MouseState mouse;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         private Texture2D protonTexture, neutronTexture, electronTexture, dottedRectangleTexture, squareBorderTexture;
-        private MouseState mouseState;
         private Vector2 mouseLocation;
-        private Vector2 universeCentre;
         private Particle[] particles;
         private SpriteFont arial12;
         private bool mouseDragging;
-        private Rectangle universe;
         private ParticleType[] particlesInUniverse;
         private string description;
         
@@ -35,13 +36,18 @@ namespace Atomicus
         {
             base.Initialize();
 
-            universe = new Rectangle(360, 30, dottedRectangleTexture.Width, dottedRectangleTexture.Height);
-            universeCentre = new Vector2(360 , 30) + Func.getCentrePoint(dottedRectangleTexture, 1);
+            universe = new Rectangle(260, 30, dottedRectangleTexture.Width + 100, dottedRectangleTexture.Height + 100);
+            universeCentre = Func.getCentrePoint(universe);
+
+            recepticalSize = new Vector2(squareBorderTexture.Width, squareBorderTexture.Height);
+            receptical1 = new Vector2(30, 30);
+            receptical2 = new Vector2(30, 134);
+            receptical3 = new Vector2(30, 238);
 
             particles = new Particle[3];
-            particles[0] = new Particle(universe, protonTexture, ParticleType.Proton, 60, 60);
-            particles[1] = new Particle(universe, neutronTexture, ParticleType.Neutron, 60, 164);
-            particles[2] = new Particle(universe, electronTexture, ParticleType.Electron, 60, 268);
+            particles[0] = new Particle(protonTexture, ParticleType.Proton);
+            particles[1] = new Particle(neutronTexture, ParticleType.Neutron);
+            particles[2] = new Particle(electronTexture, ParticleType.Electron);
 
             description = "";
         }
@@ -67,8 +73,8 @@ namespace Atomicus
         {
             base.Update(gameTime);
 
-            mouseState = Mouse.GetState();
-            mouseLocation = new Vector2(mouseState.X, mouseState.Y);
+            mouse = Mouse.GetState();
+            mouseLocation = new Vector2(mouse.X, mouse.Y);
 
             for (int i = 0; i < particles.Length; i++)
             {
@@ -78,7 +84,7 @@ namespace Atomicus
 
             for (int i = particles.Length - 1; i >= 0; i--)
             {
-                if (particles[i].mouseOver && mouseState.LeftButton == ButtonState.Pressed)
+                if (particles[i].mouseOver && mouse.LeftButton == ButtonState.Pressed)
                 {
                     if (!particles[i].beingdragged) bringToFront(ref particles, i);
                     particles[i].beingdragged = true;
@@ -95,12 +101,10 @@ namespace Atomicus
             
             for (int i = 0; i < particles.Length; i++)
             {
-                if (!particles[i].beingdragged) particles[i].update(mouseState);
+                if (!particles[i].beingdragged) particles[i].update();
             }
-            
-            if (mouseDragging) particles[particles.Length - 1].location = mouseLocation;
 
-            
+            if (mouseDragging) particles[particles.Length - 1].setLocation(new Vector2(mouse.X, mouse.Y));
             
             checkParticlesInUniverse();
             Func.countParticles(particlesInUniverse, ref protonCount, ref neutronCount, ref electronCount);
@@ -120,7 +124,7 @@ namespace Atomicus
             spriteBatch.DrawString(arial12, "neutrons: " + neutronCount, new Vector2(5, 445), Color.White);
             spriteBatch.DrawString(arial12, "electrons: " + electronCount, new Vector2(5, 460), Color.White);
 
-            spriteBatch.DrawString(arial12, description, new Vector2(universeCentre.X - (int)(arial12.MeasureString(description).X / 2), 34), Color.DarkRed, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0);
+            spriteBatch.DrawString(arial12, description, new Vector2(universeCentre.X - (int)(arial12.MeasureString(description).X / 2), universe.Y + 8), Color.DarkRed, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0);
 
             drawBackground();
 
@@ -196,9 +200,9 @@ namespace Atomicus
             spriteBatch.DrawString(arial12, "NEUTRON", new Vector2(26, 116), Color.Purple);
             spriteBatch.DrawString(arial12, "ELECTRON", new Vector2(20, 220), Color.Purple);
 
-            spriteBatch.Draw(squareBorderTexture, new Vector2(30, 30), Color.White);
-            spriteBatch.Draw(squareBorderTexture, new Vector2(30, 134), Color.White);
-            spriteBatch.Draw(squareBorderTexture, new Vector2(30, 238), Color.White);
+            spriteBatch.Draw(squareBorderTexture, receptical1, Color.White);
+            spriteBatch.Draw(squareBorderTexture, receptical2, Color.White);
+            spriteBatch.Draw(squareBorderTexture, receptical3, Color.White);
         }
 
         private void spawnNewParticle(ParticleType type)
@@ -210,9 +214,9 @@ namespace Atomicus
                 particles[i] = particles[i - 1];
             }
 
-            if (type == ParticleType.Proton) particles[0] = new Particle(universe, protonTexture, ParticleType.Proton, 60, 60);
-            else if (type == ParticleType.Neutron) particles[0] = new Particle(universe, neutronTexture, ParticleType.Neutron, 60, 164);
-            else if (type == ParticleType.Electron) particles[0] = new Particle(universe, electronTexture, ParticleType.Electron, 60, 268);
+            if (type == ParticleType.Proton) particles[0] = new Particle(protonTexture, ParticleType.Proton);
+            else if (type == ParticleType.Neutron) particles[0] = new Particle(neutronTexture, ParticleType.Neutron);
+            else if (type == ParticleType.Electron) particles[0] = new Particle(electronTexture, ParticleType.Electron);
         }
     }
 }

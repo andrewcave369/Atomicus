@@ -6,9 +6,9 @@ namespace Atomicus
 {
     internal static class Func
     {
-        internal static Vector2 getCentrePoint(Texture2D x, float scale)
+        internal static Vector2 getCentrePoint(Rectangle rect)
         {
-            return new Vector2(x.Width / 2, x.Height / 2) * scale;
+            return new Vector2(rect.X + rect.Width / 2, rect.Y + rect.Height / 2);
         }
 
         internal static string arrayToString(ParticleType[] input)

@@ -120,3 +120,4 @@ C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.XInput
 C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\Andrew\Documents\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
+F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.exe.config
