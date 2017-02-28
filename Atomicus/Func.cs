@@ -11,18 +11,6 @@ namespace Atomicus
             return new Vector2(rect.X + rect.Width / 2, rect.Y + rect.Height / 2);
         }
 
-        internal static string arrayToString(ParticleType[] input)
-        {
-            string output = "";
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                output += input[i].ToString() + " ";
-            }
-            
-            return output;
-        }
-
         internal static void countParticles(ParticleType[] input, ref int protons, ref int neutrons, ref int electrons)
         {
             protons = 0;

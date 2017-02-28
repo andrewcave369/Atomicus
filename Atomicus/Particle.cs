@@ -20,12 +20,14 @@ namespace Atomicus
         internal float scale;
         internal Texture2D texture;
         internal Vector2 destination;
-        internal float angle;
         internal Rectangle destinationZone;
+        internal int destinationTolerance;
+        internal float angle;
         internal bool movedFromReceptical;
         float radius;
         bool init;
         float orbitIncrement;
+        int protonsBelow, neutronsBelow, electronsBelow;
 
         internal bool mouseOver = false, beingdragged = false;
 
@@ -47,17 +49,18 @@ namespace Atomicus
             direction = new Vector2(0, 0);
             movedFromReceptical = false;
             movedToUniverse = false;
+            destinationTolerance = 8;
 
-            initialise();
+            initialize();
         }
 
-        internal void initialise()
+        internal void initialize()
         {
             scale = initialScale;
             init = true;
+
         }
        
-
         internal void update()
         {
             if (rect.Intersects(new Rectangle(Game1.mouse.X, Game1.mouse.Y, 0, 0)))
@@ -68,7 +71,7 @@ namespace Atomicus
 
             bool lastUniverseState = inUniverse;
             checkParticleInsideUniverse();
-            if (lastUniverseState && !inUniverse) initialise();
+            if (lastUniverseState && !inUniverse) initialize();
 
 
                 if (inUniverse && (type == ParticleType.Proton || type == ParticleType.Neutron))
@@ -77,7 +80,7 @@ namespace Atomicus
                 if (Game1.protonCount + Game1.neutronCount == 1)
                 {
                     destination = Game1.universeCentre;
-                    destinationZone = new Rectangle((int)destination.X - 10, (int)destination.Y - 10, 20, 20);
+                    destinationZone = new Rectangle((int)destination.X - destinationTolerance, (int)destination.Y - destinationTolerance, destinationTolerance * 2, destinationTolerance * 2);
                     moveLinear();
                 }
                 else if (Game1.protonCount + Game1.neutronCount > 1)
@@ -85,11 +88,14 @@ namespace Atomicus
                     if (init)
                     {
                         init = false;
-                        scale /= Game1.protonCount + Game1.neutronCount * 0.5f;
+                        checkParticlesBelow();
                         orbit += (float)Math.PI / 2;
 
                         orbitIncrement = -0.018f;
                     }
+                    scale = initialScale / (Game1.protonCount + Game1.neutronCount) * 1.7f;
+                    if (scale < 0.12f) scale = 0.12f;
+
                     radius = texture.Width * scale / 2;
                     orbitCentre();
                 }
@@ -100,11 +106,24 @@ namespace Atomicus
                 if (init)
                 {
                     init = false;
+                    checkParticlesBelow();
                     orbit = (float)Math.Atan2(Game1.universeCentre.Y - location.Y, Game1.universeCentre.X - location.X) + (float)Math.PI;
-                    orbitIncrement = 0.035f;
-                    radius = 130f;
+                    if (electronsBelow < 2)
+                    {
+                        orbitIncrement = 0.035f;
+                        radius = 75f;
+                    }
+                    else if (electronsBelow < 8)
+                    {
+                        orbitIncrement = -0.035f;
+                        radius = 125f;
+                    }
+                    else
+                    {
+                        orbitIncrement = 0.035f;
+                        radius = 175f;
+                    }
                 }
-                
                 orbitCentre();
             }
             
@@ -138,10 +157,9 @@ namespace Atomicus
             setLocation(new Vector2((float)(Game1.universeCentre.X + (radius * Math.Cos(orbit))), (float)(Game1.universeCentre.Y + (radius * Math.Sin(orbit)))));
         }
 
-        internal void setLocation(Vector2 newLocation, bool shift = true)
+        internal void setLocation(Vector2 newLocation)
         {
-            if (shift) location = newLocation - new Vector2(rect.Width / 2, rect.Height / 2);
-            else location = newLocation;
+            location = newLocation - new Vector2(rect.Width / 2, rect.Height / 2);
         }
 
         internal Vector2 getLocation()
@@ -154,13 +172,22 @@ namespace Atomicus
             if (type == ParticleType.Proton) setLocation(Game1.receptical1 + Game1.recepticalSize / 2);
             else if (type == ParticleType.Neutron) setLocation(Game1.receptical2 + Game1.recepticalSize / 2);
             else if (type == ParticleType.Electron) setLocation(Game1.receptical3 + Game1.recepticalSize / 2);
+            else if (type == ParticleType.Photon) setLocation(new Vector2(60, 360));
         }
 
         internal void initScale()
         {
-            if (type == ParticleType.Proton) initialScale = 0.351f;
-            else if (type == ParticleType.Neutron) initialScale = 0.351f;
+            if (type == ParticleType.Proton) initialScale = 0.3475f;
+            else if (type == ParticleType.Neutron) initialScale = 0.3475f;
             else if (type == ParticleType.Electron) initialScale = 0.14f;
+            else if (type == ParticleType.Photon) initialScale = 0.14f;
+        }
+
+        internal void checkParticlesBelow()
+        {
+            protonsBelow = Game1.protonCount;
+            neutronsBelow = Game1.neutronCount;
+            electronsBelow = Game1.electronCount;
         }
     }
 }

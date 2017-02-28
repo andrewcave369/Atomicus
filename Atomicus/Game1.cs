@@ -5,7 +5,7 @@ using System;
 
 namespace Atomicus
 {
-    enum ParticleType { Proton, Neutron, Electron };
+    enum ParticleType { Proton, Neutron, Electron, Photon };
     
     public class Game1 : Game
     {
@@ -18,7 +18,7 @@ namespace Atomicus
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private Texture2D protonTexture, neutronTexture, electronTexture, dottedRectangleTexture, squareBorderTexture;
+        private Texture2D protonTexture, neutronTexture, electronTexture, dottedRectangleTexture, squareBorderTexture, photonTexture;
         private Vector2 mouseLocation;
         private Particle[] particles;
         private SpriteFont arial12;
@@ -40,14 +40,15 @@ namespace Atomicus
             universeCentre = Func.getCentrePoint(universe);
 
             recepticalSize = new Vector2(squareBorderTexture.Width, squareBorderTexture.Height);
-            receptical1 = new Vector2(30, 30);
-            receptical2 = new Vector2(30, 134);
-            receptical3 = new Vector2(30, 238);
+            receptical1 = new Vector2(30, 40);
+            receptical2 = new Vector2(30, 144);
+            receptical3 = new Vector2(30, 248);
 
             particles = new Particle[3];
             particles[0] = new Particle(protonTexture, ParticleType.Proton);
             particles[1] = new Particle(neutronTexture, ParticleType.Neutron);
             particles[2] = new Particle(electronTexture, ParticleType.Electron);
+            //particles[3] = new Particle(photonTexture, ParticleType.Photon);
 
             description = "";
         }
@@ -59,6 +60,7 @@ namespace Atomicus
             protonTexture = Content.Load<Texture2D>("particles/proton");
             neutronTexture = Content.Load<Texture2D>("particles/neutron");
             electronTexture = Content.Load<Texture2D>("particles/electron");
+            photonTexture = Content.Load<Texture2D>("particles/photon");
             dottedRectangleTexture = Content.Load<Texture2D>("dottedRectangle");
             squareBorderTexture = Content.Load<Texture2D>("squareBorder");
             arial12 = Content.Load<SpriteFont>("arial12");
@@ -183,6 +185,16 @@ namespace Atomicus
                 case 8: element = "OXYGEN"; break;
                 case 9: element = "FLUORINE"; break;
                 case 10: element = "NEON"; break;
+                case 11: element = "SODIUM"; break;
+                case 12: element = "MAGNESIUM"; break;
+                case 13: element = "ALUMINIUM"; break;
+                case 14: element = "SILICON"; break;
+                case 15: element = "PHOSPHORUS"; break;
+                case 16: element = "SULFUR"; break;
+                case 17: element = "CHLORINE"; break;
+                case 18: element = "ARGON"; break;
+                case 19: element = "POTASSIUM"; break;
+                case 20: element = "CALCIUM"; break;
             }
 
             if (protonCount == electronCount && protonCount > 0) charge = "";
@@ -196,9 +208,9 @@ namespace Atomicus
         {
             spriteBatch.Draw(dottedRectangleTexture, universe, Color.White);
 
-            spriteBatch.DrawString(arial12, "PROTON", new Vector2(28, 12), Color.Purple);
-            spriteBatch.DrawString(arial12, "NEUTRON", new Vector2(26, 116), Color.Purple);
-            spriteBatch.DrawString(arial12, "ELECTRON", new Vector2(20, 220), Color.Purple);
+            spriteBatch.DrawString(arial12, "PROTON", new Vector2(28, receptical1.Y - 18), Color.Purple);
+            spriteBatch.DrawString(arial12, "NEUTRON", new Vector2(26, receptical2.Y - 18), Color.Purple);
+            spriteBatch.DrawString(arial12, "ELECTRON", new Vector2(20, receptical3.Y - 18), Color.Purple);
 
             spriteBatch.Draw(squareBorderTexture, receptical1, Color.White);
             spriteBatch.Draw(squareBorderTexture, receptical2, Color.White);
@@ -217,6 +229,14 @@ namespace Atomicus
             if (type == ParticleType.Proton) particles[0] = new Particle(protonTexture, ParticleType.Proton);
             else if (type == ParticleType.Neutron) particles[0] = new Particle(neutronTexture, ParticleType.Neutron);
             else if (type == ParticleType.Electron) particles[0] = new Particle(electronTexture, ParticleType.Electron);
+        }
+
+        private void updateParticlesBelow()
+        {
+            for (int i = 0; i < particles.Length; i++)
+            {
+                particles[i].checkParticlesBelow();
+            }
         }
     }
 }

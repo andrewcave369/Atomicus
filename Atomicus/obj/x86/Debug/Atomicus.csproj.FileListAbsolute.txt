@@ -121,3 +121,4 @@ C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.RawInp
 C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\Andrew\Documents\Atomicus\Atomicus\obj\x86\Debug\Atomicus.csprojResolveAssemblyReference.cache
 F:\Atomicus\Atomicus\bin\Windows\x86\Debug\Atomicus.exe.config
+C:\Users\Andrew\Documents\Atomicus\Atomicus\bin\Windows\x86\Debug\Content\particles\photon.xnb
